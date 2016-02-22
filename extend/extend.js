@@ -47,8 +47,6 @@ function create(o) {
 }
 
 
-
-
 /**
  * 寄生组合式继承（Final）
  */
@@ -58,6 +56,7 @@ function _Object(o) {
 	F.prototype = o;
 	return new F();
 }
+// 通过调用parent.prototype去生成实例，减少一次对于Parent生成实例
 function inheritPrototype(parent, child) {
 	// 创建对象
 	var f = _Object(parent.prototype);
