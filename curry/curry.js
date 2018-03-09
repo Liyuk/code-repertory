@@ -24,13 +24,14 @@ function add(num) {
 // method 2
 function add(num) {
     var args = [];
+    args.push(num);
 
     function addNum() {
         if (arguments.length === 0) {
             return calulate;
         } else {
             Array.prototype.push.apply(args, Array.prototype.splice.call(arguments, 0));
-            return add;
+            return addNum;
         }
     }
 
