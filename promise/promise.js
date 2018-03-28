@@ -125,7 +125,7 @@ Promise.prototype.then = function(onResolved, onRejected) {
         })
     }
 
-    if (self. status === 'pending') {
+    if (self.status === 'pending') {
         self.onResolvedCallback.push(function(value) {
             try {
                 var x = onResolved(self.data);
@@ -157,4 +157,4 @@ Promise.deferred = Promise.defer = function() {
         dfd.reject = reject;
     })
     return dfd;
-  }
+}
